@@ -17,4 +17,6 @@ public class Book {
   public int version;
   
   public String title;
+  
+  public int counter;
 }
