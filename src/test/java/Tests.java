@@ -6,6 +6,7 @@ import java.util.Properties;
 import java.util.logging.Logger;
 import org.junit.Test;
 
+import db.EmfProvider;
 import pojo.*;
 
 public class Tests
@@ -21,13 +22,7 @@ public class Tests
   public void test()
   {
     logger.info("This is just a simple test...");
-    Properties props = new Properties();
-    props.setProperty("javax.persistence.jdbc.url",
-      "jdbc:h2:mem:app2;TRACE_LEVEL_SYSTEM_OUT=1");
-    props.setProperty("javax.persistence.schema-generation.database.action",
-      "drop-and-create");
-    EntityManagerFactory emf =
-      Persistence.createEntityManagerFactory(null, props);
+    EntityManagerFactory emf = EmfProvider.getEmf();
     EntityManager em = emf.createEntityManager();
     Book b = new Book();
     em.getTransaction().begin();
