@@ -33,8 +33,6 @@ public class ReferenceByIdTest {
     System.out.println("book title: " + b2.title);
     Assert.assertEquals(b.title, b2.title);
     em.close();
-
-
   }
 
   @Test

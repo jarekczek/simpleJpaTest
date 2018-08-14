@@ -5,10 +5,13 @@
     <persistence-unit name="unit">
         <class>pojo.Author</class>
         <class>pojo.Book</class>
+        <class>pojo.Club</class>
         <class>pojo.Movie</class>
         <class>pojo.MovieInfo</class>
         <class>pojo.MovieDescription</class>
         <class>pojo.MovieReview</class>
+        <class>pojo.SchoolClass</class>
+        <class>pojo.Student</class>
         <properties>
           <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
           <property name="eclipselink.logging.logger" value="JavaLogger"/>

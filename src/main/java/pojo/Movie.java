@@ -14,7 +14,7 @@ public class Movie {
   @Version
   public int version;
 
-  // Below we map to base class of MovieReview, impossible in Hibernate
+  // Below we map to a member of base class of MovieReview, impossible in Hibernate
   // https://stackoverflow.com/a/46619634/772981
   @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL)
   public Set<MovieReview> reviews;
