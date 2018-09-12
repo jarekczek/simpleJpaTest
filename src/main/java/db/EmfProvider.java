@@ -12,12 +12,12 @@ public class EmfProvider {
   {
     if (emf == null) {
       Properties props = new Properties();
-      props.setProperty("javax.persistence.jdbc.url",
-          "jdbc:h2:mem:app2;TRACE_LEVEL_SYSTEM_OUT=1");
       //props.setProperty("javax.persistence.jdbc.url",
-      //    "jdbc:h2:c:/temp/1/app2;TRACE_LEVEL_SYSTEM_OUT=1");
-      props.setProperty("javax.persistence.schema-generation.database.action",
-          "drop-and-create");
+      //    "jdbc:h2:mem:app2;TRACE_LEVEL_SYSTEM_OUT=1");
+      props.setProperty("javax.persistence.jdbc.url",
+          "jdbc:h2:c:/temp/1/app2;TRACE_LEVEL_SYSTEM_OUT=1");
+      //props.setProperty("javax.persistence.schema-generation.database.action",
+      //"drop-and-create");
       emf = Persistence.createEntityManagerFactory("unit", props);
     }
     return emf;

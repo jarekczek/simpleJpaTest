@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import javax.persistence.Version;
 
 @Entity
@@ -15,6 +17,7 @@ public class Book {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
   public int id;
 
+  @ManyToOne
   @JoinColumn(name = "AUTHOR_ID")
   public Author author;
 

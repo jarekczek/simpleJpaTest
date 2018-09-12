@@ -15,8 +15,8 @@ repositories {
 
 dependencies {
   testCompile 'junit:junit:4.12'
-  //testRuntime 'org.hibernate:hibernate-core:5.2.10.Final'
-  testRuntime 'org.eclipse.persistence:eclipselink:2.6.3'
+  testRuntime 'org.hibernate:hibernate-core:5.2.10.Final'
+  //testRuntime 'org.eclipse.persistence:eclipselink:2.6.3'
   testRuntime 'com.h2database:h2:1.4.195'
   testRuntime 'mysql:mysql-connector-java:5.1.44'
   compile 'javax:javaee-api:7.0'
